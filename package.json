@@ -9,7 +9,9 @@
   "scripts": {
     "prebuild": "rm -rf esm",
     "build": "tsc --outDir esm --module ES2022 --declaration true --noEmit false",
-    "ci": "yarn lint && yarn size"
+    "lint": "eslint .",
+    "ts": "tsc --noEmit",
+    "ci": "yarn lint && yarn ts"
   },
   "files": [
     "esm"
@@ -31,9 +33,12 @@
     }
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^3.2.0",
     "@tsconfig/react-native": "^2.0.3",
     "@types/jest": "^29.2.5",
     "@types/react": "^18.0.26",
+    "eslint": "^8.32.0",
+    "prettier": "^2.8.3",
     "react-native": "^0.71.0",
     "react-native-code-push": "^6.4.1",
     "typescript": "^4.9.4"

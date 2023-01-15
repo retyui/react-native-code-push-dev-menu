@@ -16,6 +16,7 @@ export const Progress: FC<Props> = ({progressRef}) => {
     return () => {
       progressRef.current = () => {};
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (progress === 0) {
