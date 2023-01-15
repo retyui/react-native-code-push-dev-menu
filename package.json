@@ -1,0 +1,41 @@
+{
+  "name": "react-native-code-push-dev-menu",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "repository": "git@github.com:retyui/react-native-stylex.git",
+  "author": "David <4661784+retyui@users.noreply.github.com>",
+  "scripts": {
+    "prebuild": "rm -rf esm",
+    "build": "tsc --outDir esm --module ES2022 --declaration true --noEmit false",
+    "ci": "yarn lint && yarn size"
+  },
+  "files": [
+    "esm"
+  ],
+  "peerDependencies": {
+    "react": ">=16.4.0",
+    "react-native": ">=0.62.0",
+    "react-native-code-push": ">=6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "react-native-code-push": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@tsconfig/react-native": "^2.0.3",
+    "@types/jest": "^29.2.5",
+    "@types/react": "^18.0.26",
+    "react-native": "^0.71.0",
+    "react-native-code-push": "^6.4.1",
+    "typescript": "^4.9.4"
+  }
+}
